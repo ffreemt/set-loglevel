@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "set_loglevel"
 version = "0.1.0"
-description = "pack_name descr "
+description = "Return a loglevel (10, 20, etc.) taking ENV LOGLEVEL into account"
 authors = ["ffreemt"]
 license = "MIT"
 readme = "README.md"
@@ -10,8 +10,6 @@ repository = "https://github.com/ffreemt/set-loglevel"
 [tool.poetry.dependencies]
 python = "^3.8.3"
 logzero = "^1.7.0"
-icecream = "^2.1.1"
-install = "^1.3.5"
 
 [tool.poe.executor]
 type = "poetry"
@@ -31,11 +29,7 @@ tunnel = {cmd = "ssh -CN ip_or_hostname_defined_in_hosts -L 9091:127.0.0.1:9091"
 pytest = "^7.1"
 flake8 = "^3.9.2"
 pydocstyle = "^6.1.1"
-# tbump = "^6.3.2"
 poethepoet = "^0.10.0"
-
-[tool.poetry.scripts]
-"set-loglevel" = "set_loglevel.__main__:app"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
