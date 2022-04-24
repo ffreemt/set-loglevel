@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "set_loglevel"
-version = "0.1.0"
+version = "0.1.1"
 description = "Return a loglevel (10, 20, etc.) taking ENV LOGLEVEL into account"
 authors = ["ffreemt"]
 license = "MIT"
