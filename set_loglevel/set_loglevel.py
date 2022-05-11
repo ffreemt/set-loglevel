@@ -1,6 +1,8 @@
 """Set loglevel."""
-# pylint: disable=duplicate-code, line-too-long, broad-except
+# pylint: disable=invalid-name, duplicate-code, line-too-long, broad-except
+import dotenv
 import environs
+from logzero import logger
 
 
 def set_loglevel(
@@ -31,6 +33,13 @@ def set_loglevel(
 
     if force:
         return level
+
+    # check .env for LOGLEVEL='debug' etc
+    try:
+        dotenv.load_dotenv()
+    except Exception as e:
+        logger.error(e)
+        raise
 
     try:
         _ = environs.Env().log_level("LOGLEVEL")
