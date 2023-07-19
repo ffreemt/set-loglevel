@@ -2,7 +2,7 @@
 # pylint: disable=invalid-name, duplicate-code, line-too-long, broad-except
 import dotenv
 import environs
-from logzero import logger
+from loguru import logger
 
 
 def set_loglevel(
